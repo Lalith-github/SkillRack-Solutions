@@ -4,7 +4,6 @@
 int main() {
     char S[1000];
     scanf("%s", S);
-
     int vowelPos = -1; // Initialize to -1, indicating no vowel found yet
 
     // Find the position of the first vowel

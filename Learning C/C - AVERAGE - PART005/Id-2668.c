@@ -4,7 +4,6 @@ int main() {
     int M, N;
     scanf("%d", &M);
     scanf("%d", &N);
-
     int matrix[M][N];
 
     // Input for matrix

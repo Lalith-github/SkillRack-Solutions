@@ -6,12 +6,16 @@ int main() {
 
     int i = 0;
     while (s[i] != '\0') {
-        int count = s[i] - '0'; // Convert the character to integer
-        char ch = s[i + 1];
+        int count = 0;
+        while (s[i] >= '0' && s[i] <= '9') {
+            count = count * 10 + (s[i] - '0');
+            i++;
+        }
+        char ch = s[i];
         for (int j = 0; j < count; j++) {
             printf("%c", ch);
         }
-        i += 2;
+        i++;
     }
 
     return 0;

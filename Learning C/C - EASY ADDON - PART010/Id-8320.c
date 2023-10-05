@@ -3,13 +3,12 @@
 int main() {
     int R, C;
     scanf("%d %d", &R, &C);
+    int m[R][C];
 
-    int matrix[R][C];
-
-    // Input the matrix
+    // Input the m
     for(int i = 0; i < R; i++) {
         for(int j = 0; j < C; j++) {
-            scanf("%d", &matrix[i][j]);
+            scanf("%d", &m[i][j]);
         }
     }
 
@@ -20,7 +19,7 @@ int main() {
     for(int j = 0; j < C; j++) {
         int sum = 0;
         for(int i = 0; i < R; i++) {
-            sum += matrix[i][j];
+            sum += m[i][j];
         }
         if (sum >= maxSum) {
             maxSum = sum;
@@ -28,11 +27,11 @@ int main() {
         }
     }
 
-    // Print the modified matrix without the column with maximum sum
+    // Print the modified m without the column with maximum sum
     for(int i = 0; i < R; i++) {
         for(int j = 0; j < C; j++) {
             if (j != maxCol) {
-                printf("%d ", matrix[i][j]);
+                printf("%d ", m[i][j]);
             }
         }
         printf("\n");

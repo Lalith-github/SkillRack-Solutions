@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    double cost_alen, cost_tim, width_alen, width_tim;
-    scanf("%lf %lf", &cost_alen, &cost_tim);
-    scanf("%lf %lf", &width_alen, &width_tim);
+    double ca, ct, wa, wt;
+    scanf("%lf %lf", &ca, &ct);
+    scanf("%lf %lf", &wa, &wt);
 
-    double area_alen = cost_alen / 5;
-    double length_alen = area_alen / width_alen;
+    double area_alen = ca / 5;
+    double length_alen = area_alen / wa;
 
-    double area_tim = cost_tim / 5;
-    double length_tim = area_tim / width_tim;
+    double area_tim = ct / 5;
+    double length_tim = area_tim / wt;
 
     double difference = length_tim - length_alen;
 

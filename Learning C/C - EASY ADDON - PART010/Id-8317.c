@@ -13,31 +13,31 @@ int main() {
         }
     }
 
-    int firstOccurrenceRow = -1, firstOccurrenceCol = -1;
-    int secondOccurrenceRow = -1, secondOccurrenceCol = -1;
+    int fOR = -1, fOC = -1;
+    int sOC = -1, sOc = -1;
     
     // Find the first two occurrences of K
     for(int i = 0; i < R; i++) {
         for(int j = 0; j < C; j++) {
             if(matrix[i][j] == K) {
-                if(firstOccurrenceRow == -1) {
-                    firstOccurrenceRow = i;
-                    firstOccurrenceCol = j;
+                if(fOR == -1) {
+                    fOR = i;
+                    fOC = j;
                 } else {
-                    secondOccurrenceRow = i;
-                    secondOccurrenceCol = j;
+                    sOC = i;
+                    sOc = j;
                     break;
                 }
             }
         }
-        if(secondOccurrenceRow != -1) {
+        if(sOC != -1) {
             break;
         }
     }
 
     // Print the sub-matrix
-    for(int i = firstOccurrenceRow; i <= secondOccurrenceRow; i++) {
-        for(int j = firstOccurrenceCol; j <= secondOccurrenceCol; j++) {
+    for(int i = fOR; i <= sOC; i++) {
+        for(int j = fOC; j <= sOc; j++) {
             printf("%d ", matrix[i][j]);
         }
         printf("\n");

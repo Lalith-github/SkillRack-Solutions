@@ -4,8 +4,8 @@
 int main() {
     char s[101];
 
-    // Read input string
-    scanf("%s", s);
+    // Read input string using fgets to handle spaces and newline characters
+    fgets(s, sizeof(s), stdin);
 
     // Find the index of the first underscore
     int underscoreIndex = -1;
@@ -18,7 +18,7 @@ int main() {
 
     // Reverse the string till the first underscore
     int start = 0;
-    int end = (underscoreIndex == -1) ? strlen(s) - 1 : underscoreIndex - 1;
+    int end = (underscoreIndex == -1) ? strlen(s) - 2 : underscoreIndex - 1;
     while (start < end) {
         char temp = s[start];
         s[start] = s[end];
