@@ -30,11 +30,8 @@ void decryptMessage(char *message, int columns) {
 int main() {
     char message[201];
     int columns;
-
     scanf("%s", message);
     scanf("%d", &columns);
-
     decryptMessage(message, columns);
-
     return 0;
 }

@@ -4,7 +4,6 @@
 int main() {
     char word[101];
     scanf("%s", word);
-
     int possibilities = 1;
     int len = strlen(word);
 
