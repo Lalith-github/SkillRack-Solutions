@@ -6,6 +6,7 @@ void reverseWords(char *str) {
     int end = strlen(str) - 1;
     char temp;
     
+    // Reverse the entire string
     while (end > start) {
         temp = str[start];
         str[start] = str[end];
@@ -14,6 +15,7 @@ void reverseWords(char *str) {
         end--;
     }
     
+    // Reverse each word in the reversed string
     start = 0;
     while (str[start] != '\0') {
         end = start;
@@ -27,18 +29,15 @@ void reverseWords(char *str) {
             str[start + i] = str[end - i - 1];
             str[end - i - 1] = temp;
         }
-        
         start = end + 1;
     }
 }
 
 int main() {
     char str[100];
-    gets(str);
-    
+    fgets(str, sizeof(str), stdin); // Read input string using fgets
+    str[strlen(str) - 1] = '\0'; // Remove the newline character from fgets input
     reverseWords(str);
-    
     printf("%s\n", str);
-    
     return 0;
 }
