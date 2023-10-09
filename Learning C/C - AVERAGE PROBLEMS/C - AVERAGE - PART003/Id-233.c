@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
+int main()
+{
     char S[101];
     int X, Y;
     scanf("%s", S);
@@ -10,12 +11,15 @@ int main() {
     int len = strlen(S);
 
     // Adjust X and Y to be within the length of S
-    X = X % len;
-    Y = Y % len;
+    X = (X - 1) % len;
+    Y = (Y - 1) % len;
 
-    if (S[X - 1] == S[Y - 1]) {
+    if (S[X] == S[Y])
+    {
         printf("YES\n");
-    } else {
+    }
+    else
+    {
         printf("NO\n");
     }
 

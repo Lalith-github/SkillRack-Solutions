@@ -1,24 +1,27 @@
+// 226
 #include <stdio.h>
 
-int isPalindrome(int num) {
+int isPalindrome(int num)
+{
     int reversed = 0, original = num;
-    while (num > 0) {
+    while (num > 0)
+    {
         reversed = reversed * 10 + num % 10;
         num /= 10;
     }
     return original == reversed;
 }
 
-int main() {
+int main()
+{
     int N;
     scanf("%d", &N);
 
     int nextNumber = N + 1;
-    while (!isPalindrome(nextNumber)) {
-        nextNumber++;
-    }
+    while (!isPalindrome(nextNumber++))
+        ;
 
-    printf("%d\n", nextNumber);
+    printf("%d", nextNumber);
 
     return 0;
 }
