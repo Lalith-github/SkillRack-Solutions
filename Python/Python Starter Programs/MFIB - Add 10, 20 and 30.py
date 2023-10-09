@@ -1,0 +1,5 @@
+numList = list(map(int, input().split()))
+numList.append(10)
+numList.append(20)
+numList.append(30)
+print(*numList)
