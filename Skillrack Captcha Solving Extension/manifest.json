@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "SkillRack - Easy",
+  "version": "1.0.0",
+  "description": "Your descriptions goes here",
+  "author": "coder-vasen",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.skillrack.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
