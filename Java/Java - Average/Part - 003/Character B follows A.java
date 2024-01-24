@@ -7,7 +7,7 @@ public class Hello {
         String input = sc.nextLine();
         char A = sc.nextLine().charAt(0);
         char B = sc.nextLine().charAt(0);
-
+        
         int count = 0;
         for (int i = 0; i < input.length() - 1; i++) {
             char temp = input.charAt(i);
