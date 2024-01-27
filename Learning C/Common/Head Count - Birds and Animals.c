@@ -9,23 +9,23 @@ printf("%d\n",abs((legcount-(4*headcount))/2));
 printf("%d\n",abs(legcount-((2*headcount))/2));
 }
 
-Sample Input/Output:
+// Sample Input/Output:
 
-Example 1:
-Input:
-27
-84
+// Example 1:
+// Input:
+// 27
+// 84
 
-Output:
-12 15
+// Output:
+// 12 15
 
-Explanation:
-There are 12 birds and 15 animals.
+// Explanation:
+// There are 12 birds and 15 animals.
 
-Example 2:
-Input:
-114
-256
+// Example 2:
+// Input:
+// 114
+// 256
 
 Output:
 100 14
