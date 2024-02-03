@@ -1,24 +1,25 @@
-// #include <bits/stdc++.h>
+#include <bits/stdc++.h>
  
-// using namespace std;
+using namespace std;
 
-// string firstRepChar(string &s){
-//     int a[26] = {0};
-    
-//     for(int i=s.length();i>= 0; i--){
-//         char ch = s[i];
-//         if(a[ch - 'a'] != 0) return string(1, ch);
-//         else a[ch - 'a' ]++;
-//     }
-//     return "-1";
-// }
+char firstRepChar(const string &s){
+    int length = s.length();
+    for(int i=0;i<length;i++){
+        char temp = s[i];
+        if (temp != ' '){
+            for(int j=i+1;j<length;j++){
+                if (temp == s[j]) return temp;
+            }
+        }
+    }
+    return s[0];
+}
 
-// int main(int argc, char** argv)
-// {
-//     string input;
+int main(int argc, char** argv)
+{
+    string input;
+    getline(cin, input);
     
-//     getline(cin, input);
+    cout << firstRepChar(input);
     
-//     cout << firstRepChar(input);
-
-// }
+}
