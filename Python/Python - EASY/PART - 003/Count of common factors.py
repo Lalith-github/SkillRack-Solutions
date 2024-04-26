@@ -1,16 +1,22 @@
-n = int(input())
+def find_factors(num):
+    factors = set()
+    for i in range(1, num + 1):
+        if num % i == 0:
+            factors.add(i)
+    return factors
 
-count = 0
-arr = []
+N = int(input())
+numbers = [int(input()) for _ in range(N)]
 
-for i in range(n):
-    arr.append(int(input()))
+smallest_number = min(numbers)
+common_factors = find_factors(smallest_number)
 
-arr = sorted(arr, reverse=True)
+# Remove factors of the smallest number that are not common to all numbers
+for num in numbers:
+    common_factors.intersection_update(find_factors(num))
 
-for i in range(2, arr[0]):
-    for j in range(0, n):
-        if arr[j] % i !=0:
-            break
-    if j>=n: count +=1
-print(count)
+# Exclude 1 from the common factors
+common_factors.discard(1)
+
+# Print the count of common factors
+print(len(common_factors))

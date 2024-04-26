@@ -1,13 +1,16 @@
-n = int(input())
-
-def is_prime(n):
-    if n < 2:
+def is_prime(num):
+    if num < 2:
         return False
-    for i in range(2, int(n**.5) + 1):
-        if n % i == 0:
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
             return False
     return True
 
-while not is_prime(n+1):
-    n += 1
-print(n+1)
+N = int(input())
+
+next_prime = N + 1
+while True:
+    if is_prime(next_prime):
+        print(next_prime)
+        break
+    next_prime += 1

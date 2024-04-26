@@ -9,4 +9,4 @@ for value in values:
     time.append(int(temp[1]))
 
 result = sum(distance) / sum(time)
-print("{:.2f}".format(result))
+print("{:.2f} kmph".format(result))

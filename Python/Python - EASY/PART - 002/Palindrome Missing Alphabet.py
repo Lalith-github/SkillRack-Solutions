@@ -1,13 +1,11 @@
-# #Your code below
-# string = input()
+S = input().strip()
 
-# first_half = string[:len(string)//2 + 1]
-# second_half = string[len(string)//2+1:]
-# second_half = second_half[::-1]
-# flag = False
-# for i in range(len(second_half)):
-#     if first_half[i] != second_half[i]:
-#         print(first_half[i])
-#         break
-    
-        
+seen_chars = set()
+
+for char in S:
+    if char in seen_chars:
+        seen_chars.remove(char)
+    else:
+        seen_chars.add(char)
+
+print(seen_chars.pop())
