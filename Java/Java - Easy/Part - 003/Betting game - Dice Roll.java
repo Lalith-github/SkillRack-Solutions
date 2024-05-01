@@ -11,7 +11,7 @@ public class Hello {
        
         int sum =0;
         for(String inputValue: input.split(" ")){
-            int value = Integer.parseInt(inputValue);
+            int value = Integer.parseInt(inputvalue);
             if(value%2==0) sum -= y;
             else sum+=x;
             
